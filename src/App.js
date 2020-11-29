@@ -1,14 +1,22 @@
+import React from 'react';
+//追加
+import Button from '@material-ui/core/Button';
 import logo from './logo.svg';
 import './App.css';
-
+ 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header">        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        //追加　ここから
+        <Button variant="contained" color="primary">
+        Hello World
+        </Button>
+        //追加　ここまで
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -21,5 +29,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
