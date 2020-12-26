@@ -1,20 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import PrivateRoute from "./auth/PrivateRoute";
-import { AuthProvider } from "./auth/AuthProvider";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PrivateRoute from "./Auth/PrivateRoute";
+import { AuthProvider } from "./Auth/AuthProvider";
 import Home from "./components/Home";
-import Login from "./auth/Login";
-import SignUp from "./auth/SignUp";
+import Login from "./Auth/Login";
+import SignUp from "./Auth/SignUp";
 
 const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <div>
-          <PrivateRoute exact path="/" component={Home} />
+        <Switch>
+          <PrivateRoute exact path="/Home" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-        </div>
+        </Switch>
       </Router>
     </AuthProvider>
   );
