@@ -3,20 +3,18 @@ import "../Auth/AuthProvider";
 import "firebase/firestore";
 import "firebase/auth";
 
-export const app = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+const firebaseConfig = firebase.initializeApp({
+  apiKey: "AIzaSyBC0Ji2E-LILDf8QoEpbTaiGJdEqCrVX6w",
+  authDomain: "invite-ff5d3.firebaseapp.com",
+  databaseURL: "https://invite-ff5d3.firebaseio.com",
+  projectId: "invite-ff5d3",
+  storageBucket: "invite-ff5d3.appspot.com",
+  messagingSenderId: "453064280850",
+  appId: "1:453064280850:web:24b15218e8a4906c7001cb",
+  measurementId: "G-HV6VWLGFPM",
 });
-
-// if(firebase.apps.length === 0);
 
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-export { auth, db };
+export { firebaseConfig, auth, db };
