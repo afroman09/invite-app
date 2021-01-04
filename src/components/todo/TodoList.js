@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
 import Todo from './Todo'
+import { db } from '../../firebase/Firebase';
 
 function TodoList() {
   const [todos, setTodos] = useState([])
 
+// ||...or(または)
+// 入力された値が空白文字だった場合、新規作成されない
   const addTodo = (todo) => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return
     }
 
+    //... = 括弧を外してくれる
     const newTodos = [todo, ...todos]
 
     setTodos(newTodos)
@@ -30,7 +34,6 @@ function TodoList() {
     setTodos(removeArr)
   }
 
-  // eslint-disable-next-line no-unused-vars
   const completeTodo = (id) => {
     let updateTodo = todos.map((todo) => {
       if (todo.id === id) {
@@ -40,6 +43,8 @@ function TodoList() {
     })
     setTodos(updateTodo)
   }
+
+// onsubmit = 送信ボタンが押された時に起動するイベント
 
   return (
     <div>

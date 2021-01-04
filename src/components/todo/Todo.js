@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import TodoForm from './TodoForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+import { db } from '../../firebase/Firebase';
 
 function Todo ({ todos, completeTodo, removeTodo, updateTodo }) {
   const [edit, setEdit] = useState({
@@ -26,7 +27,7 @@ function Todo ({ todos, completeTodo, removeTodo, updateTodo }) {
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
       key={index}
     >
-        <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+        <div key={todo.id} onClick={(e) => completeTodo(todo.id)}>
             {todo.text}
         </div>
         <div className="icons">

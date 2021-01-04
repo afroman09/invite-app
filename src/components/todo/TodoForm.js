@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { db } from '../../firebase/Firebase';
 // rfceで雛形を作成
 
 function TodoForm(props) {
@@ -25,6 +26,7 @@ function TodoForm(props) {
     setInput('')
   }
 
+
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
       {props.edit ? (
@@ -44,14 +46,14 @@ function TodoForm(props) {
         <>
           <input
             type="text"
-            placeholder="Add a todo"
+            placeholder="入力してください"
             value={input}
             name="text"
             className="todo-input"
             onChange={handleChange}
             ref={inputRef}
           />
-          <button className="todo-button">Add todo</button>
+          <button className="todo-button">作成</button>
         </>
       )}
     </form>
