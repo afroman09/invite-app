@@ -1,0 +1,69 @@
+/*ツイートリスト*/
+.tweet-list{
+    width:350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: #5ED3CF;
+  }
+  
+  /*line風のUI*/
+  .line-bc {
+    padding: 5px 10px;
+    max-width: 450px;
+    text-align: right;
+    font-size: 14px;
+    background: #5ED3CF;
+    border-radius: 10px;
+    word-wrap: break-word;
+  }
+  
+  /*吹き出し部分*/
+  .balloon6 {
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden;
+  }
+  
+  .balloon6 .faceicon {
+      float: left;
+      margin-right: -50px;
+      width: 60px;
+      text-align: center;
+  }
+  
+  .balloon6 .faceicon img{
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+  }
+  .balloon6 .chatting {
+      width: 100%;
+      text-align: left;
+  }
+  .says {
+      display: inline-block;
+      position: relative;
+      margin: 20px 0 0 70px;
+      padding: 10px;
+      max-width: 230px;
+      border-radius: 12px;
+      background: #edf1ee;
+  }
+  
+  .says:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 3px;
+      left: -19px;
+      border: 8px solid transparent;
+      border-right: 18px solid #edf1ee;
+      -ms-transform: rotate(35deg);
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
+  }
+  .says p {
+      margin: 0;
+      padding: 0;
+  }

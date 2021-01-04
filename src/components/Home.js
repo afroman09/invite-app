@@ -1,20 +1,21 @@
 import React from "react";
 import { firebaseConfig } from "../firebase/Firebase.js";
-import TodoList from './todo/TodoList'
+import { Link } from "react-router-dom";
+import TodoList from "./todo/TodoList";
+import Timeline from "./timeline/Timeline";
 
 function Home(props) {
   return (
     <div>
-      <h2>Home Page</h2>
-      {/* ユーザーをログアウトさせる */}
-      <button onClick={() => firebaseConfig.auth().signOut()}>Sign out</button>
-
+      <Timeline />
       <div className="todo-app">
-      <TodoList />
+        <TodoList />
+      </div>
+      <Link to="/todo/ToDoHome">
+        <button>Todo</button>
+      </Link>
+      <button onClick={() => firebaseConfig.auth().signOut()}>Sign out</button>
     </div>
-
-    </div>
-    
   );
 }
 

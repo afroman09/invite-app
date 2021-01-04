@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
 import Todo from './Todo'
-import { db } from '../../firebase/Firebase';
+// import { db } from '../../firebase/Firebase';
 
 function TodoList() {
   const [todos, setTodos] = useState([])
