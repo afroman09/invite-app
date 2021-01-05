@@ -6,6 +6,7 @@ import { AuthProvider } from "./Auth/AuthProvider";
 import Home from "./components/Home";
 import Login from "./Auth/Login";
 import SignUp from "./Auth/SignUp";
+import ToDoHome from "./components/ToDoHome";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/ToDoHome" component={ToDoHome} />
         </Switch>
       </Router>
     </AuthProvider>
