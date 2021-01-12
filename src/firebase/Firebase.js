@@ -16,5 +16,6 @@ const firebaseConfig = firebase.initializeApp({
 
 const auth = firebase.auth();
 const db = firebase.firestore();
+const collection = db.collection('tweets');
 
-export { firebaseConfig, auth, db };
+export { firebaseConfig, auth, db, collection };

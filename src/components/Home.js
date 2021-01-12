@@ -6,13 +6,13 @@ import Timeline from "./timeline/Timeline";
 
 function Home(props) {
   return (
-    <div>
+    <React.Fragment>
       <Timeline />
       <Link to="/ToDoHome">
         <button>Todo</button>
       </Link>
       <button onClick={() => firebaseConfig.auth().signOut()}>Sign out</button>
-    </div>
+    </React.Fragment>
   );
 }
 

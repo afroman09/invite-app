@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import React from "react";
 import "./Timeline.css"
 
 class Timeline extends Component {
@@ -10,10 +9,6 @@ class Timeline extends Component {
     this.userName = this.userName.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-//   useStateを使って書き換えていく
-
-//   const Timeline = ()
 
   render() {
     return (
@@ -48,6 +43,7 @@ class Timeline extends Component {
     );
   }
 
+  // 
   tweet(event) {
     this.setState({ text: event.target.value });
   }
@@ -59,9 +55,11 @@ class Timeline extends Component {
   handleSubmit(event) {
     /*  ユーザー名・ツイートが入力されなかった場合のバリデーション */
     event.preventDefault();
-    if(this.state.user === "") {
+    /* ユーザー名の空入力を防止 */
+    if(this.state.user === "") { 
       alert('ユーザー名を入力してください')
       return;
+      /* テキストの空入力を防止 */
     } else if(this.state.text === "") {
       alert('ツイート内容を入力してください')
       return;
@@ -80,7 +78,7 @@ class Timeline extends Component {
   }
 }
 
-class TweetList extends React.Component {
+class TweetList extends Component {
   render() {
     return (
       <React.Fragment>
